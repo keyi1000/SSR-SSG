@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   react-app:
     build:
@@ -12,6 +10,7 @@ services:
       - /app/node_modules
     environment:
       - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
     stdin_open: true
     tty: true
 
@@ -29,7 +28,3 @@ services:
       - NODE_ENV=development
     stdin_open: true
     tty: true
-
-networks:
-  default:
-    driver: bridge
